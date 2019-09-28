@@ -16,9 +16,7 @@
 title: Balanced-COPA
 email:
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Balanced-COPA for causal reasoning benchmark training.
 twitter_username: pkavumba
 github_username: pkavumba
 minimal_mistakes_skin: dark
@@ -65,6 +63,16 @@ footer:
     - label: "Dataset"
       icon: ""
       url: "#"
+
+# SEO Related
+google_site_verification: "OFPhlIz_R75kjlev0PBr0xAK6PJN76rJUXnKDZRwgMo"
+
+# Analytics
+analytics:
+  provider: false # false (default), "google", "google-universal", "custom"
+  google:
+    tracking_id: "UA-68268899-4"
+    anonymize_ip: # true, false (default)
 
 defaults:
   # _posts
