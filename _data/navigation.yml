@@ -1,0 +1,12 @@
+main:
+  - title: "Paper"
+    url: #
+  - title: "Dataset"
+    url: #
+sidemenu:
+  - title: Quicklinks
+    children:
+      - title: "Paper"
+        url: #
+      - title: "Dataset"
+        url: #
