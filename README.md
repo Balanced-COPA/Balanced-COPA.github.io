@@ -1,4 +1,4 @@
-# [Balanced-COPA](https:balanced-copa.github.io)
+# [Balanced-COPA](https://balanced-copa.github.io)
 
 ---
 
