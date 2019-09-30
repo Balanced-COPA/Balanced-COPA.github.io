@@ -74,6 +74,9 @@ analytics:
     tracking_id: "UA-68268899-4"
     anonymize_ip: true # true, false (default)
 
+atom_feed:
+  path: "" # blank (default) uses feed.xml
+
 defaults:
   # _posts
   - scope:
@@ -99,3 +102,5 @@ defaults:
     values:
       sidebar:
         nav: "sidemenu"
+      toc: true
+      toc_sticky: true
