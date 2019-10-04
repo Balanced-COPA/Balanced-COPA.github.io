@@ -16,7 +16,9 @@
 title: Balanced-COPA
 email:
 description: >- # this means to ignore newlines until "baseurl:"
-  Balanced-COPA for causal reasoning benchmark training.
+  Balanced-COPA neutralizes superficial cues (annotation artifacts)
+  present in the original training COPA (Choice of Plausible Alternatives)
+  benchmark for causal reasoning.
 twitter_username: pkavumba
 github_username: pkavumba
 minimal_mistakes_skin: dark

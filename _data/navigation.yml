@@ -2,11 +2,11 @@ main:
   - title: "Paper"
     url: #
   - title: "Dataset"
-    url: #
+    url: "/downloads/balanced_copa.tar.bz2"
 sidemenu:
   - title: Quicklinks
     children:
       - title: "Paper"
         url: #
       - title: "Dataset"
-        url: #
+        url: "/downloads/balanced_copa.tar.bz2"
