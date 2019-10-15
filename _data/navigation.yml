@@ -10,3 +10,7 @@ sidemenu:
         url: #
       - title: "Dataset"
         url: "/downloads/balanced_copa.tar.bz2"
+      - title: "Easy/Hard Subset IDs"
+        url: "/downloads/easy_hard_subsets.json"
+      - title: "BERT/RoBERTa Prediction Keys"
+        url: "/downloads//downloads/predictions.tar.bz2"
