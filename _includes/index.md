@@ -1,6 +1,3 @@
----
----
-
 <p><strong>Paper To appear in Proceedings of COIN: COmmonsense INference in Natural Language Processing, pp. _-_, November 2019.</strong></p>
 
 <h1>Summary</h1>
@@ -50,9 +47,31 @@ superficial cues on model performance.
   rel="nofollow" target="_blank">
 balanced_copa.tar.bz2 (27K)</a></strong></p>
 
-<!--
-<h1>Examples</h1>
-<p>Coming soon</p -->
+<h1>Balanced-COPA Examples</h1>
+<p><strong>Original instance</strong></p>
+<p>The stain came out of the shirt. What was the CAUSE of this?<br>
+&#10004; I bleached the shirt. <br>
+&#10007; I patched the shirt. <!-- correct -->
+</p>
+
+<p><strong>Mirrored instance</strong></p>
+<p>
+The shirt did not have a hole anymore. What was the CAUSE of this?<br>
+&#10007; I bleached the shirt. <br>
+&#10004; I patched the shirt.
+</p>
+
+<p><strong>Original instance</strong></p>
+<P>
+The woman hummed to herself. What was the CAUSE for this? <br>
+&#10004; She was in a good mood. <br>
+&#10007; She was nervous.</p>
+
+<p><strong>Mirrored instance</strong></p>
+<P>The woman trembled. What was the CAUSE for this? <br>
+&#10007; She was in a good mood. <br>
+&#10004; She was nervous.</p>
+
 <h1>Results</h1>
 <h2>Easy/Hard Subsets</h2>
 To investigate the behaviour of models trained on the original COPA, which contains superficial cues, we split the test set into an <em>Easy</em> subset and a <em>Hard</em> subset.
