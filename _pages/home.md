@@ -93,14 +93,9 @@ The woman hummed to herself. What was the CAUSE for this? <br>
 &#10007; She was in a good mood. <br>
 &#10004; She was nervous.</p>
 
-<<<<<<< HEAD:_includes/index.md
-<h1>Superficial Cues (Annotation Artifacts)</h1>
-<!-- img src="{{site.url}}/assets/images/single_token_cues.png" alt="Superficial Cues" -->
-=======
 # Superficial Cues (Annotation Artifacts)
 
-<img src="{{site.url}}/assets/images/single_token_cues.png" alt="Superficial Cues">
->>>>>>> toc:_pages/home.md
+<!-- img src="{{site.url}}/assets/images/single_token_cues.png" alt="Superficial Cues" -->
 <p>
 One of the simplest types of superficial cues are unbalanced token distributions, i.e tokens appearing more often or less frequently with one particular instance label than with other labels.
 COPA contains single token cues, such as a, was, went, that are predictive of the correct alternative.
@@ -116,13 +111,12 @@ Easy and Hard Subsets IDs here (6.4K)</a></p>
 
 # Results
 
-<<<<<<< HEAD:_includes/index.md
-<h2>Easy and Hard Subsets Results</h2>
-=======
+# Easy and Hard Subsets Results
+
 ## Easy and Hard Subsets Results
 
->>>>>>> toc:_pages/home.md
 <img src="{{site.url}}/assets/images/easy_hard_eval.png" alt="Easy/Hard Evaluation">
+
 <p>Prediction keys for BERT and RoBERTa are available <a href="{{site.url}}/downloads/predictions.tar.bz2" 
   rel="nofollow" target="_blank">
     Here predictions.tar.bz2 (2.2K)</a></p>
