@@ -74,21 +74,10 @@ The woman hummed to herself. What was the CAUSE for this? <br>
 &#10004; She was nervous.</p>
 
 <h1>Superficial Cues (Annotation Artifacts)</h1>
-<img src="{{site.url}}/assets/images/single_token_cues.png" alt="Superficial Cues">
+<!-- img src="{{site.url}}/assets/images/single_token_cues.png" alt="Superficial Cues" -->
 <p>
 One of the simplest types of superficial cues are unbalanced token distributions, i.e tokens appearing more often or less frequently with one particular instance label than with other labels.
-we identify superficial cues &mdash; in this case a single token that appears more frequently in correct alternatives or wrong alternatives &mdash; in the COPA training set.
-To find superficial cues in the form of predictive tokens, we use the following measures, defined by 
-<a href="https://www.aclweb.org/anthology/P19-1459/" rel="nofollow" target="_blank">Niven and Kao (2019)</a>.
-</p>
-<ul>
-<li><strong>Applicability</strong>: The applicability of a token counts how often this token occurs in an alternative with one label, but not the other.
-</li>
-<li><strong>Productivity</strong>: The productivity of a token is the proportion of applicable instances for which it predicts the correct answer
-</li>
-<li><strong>Coverage</strong>: the coverage of a token is the proportion of applicable instances among all instances.</li>
-</ul>
-<p>For example, <em>a</em> is the token with the highest  coverage  and  appears  in  either  a  correct  alternative or wrong alternative in 21.2% of COPA-training instances. Its productivity of 57.5% expresses that it appears in correct alternatives 7.5% more often than expected by random chance. This suggests that a model could rely on such unbalanced distributions of tokens to predict answers based only on alternatives without understandingthe task.</p>
+COPA contains single token cues, such as a, was, went, that are predictive of the correct alternative.
 
 <h1>Easy/Hard Subsets</h1>
 To investigate the behaviour of models trained on the original COPA, which contains superficial cues, we split the test set into an <em>Easy</em> subset and a <em>Hard</em> subset.
@@ -100,14 +89,13 @@ This results in the <em>Easy</em> subset with 190 instances and the <em>Hard</em
 
 <h1>Results</h1>
 
-
 <h2>Easy and Hard Subsets Results</h2>
 <img src="{{site.url}}/assets/images/easy_hard_eval.png" alt="Easy/Hard Evaluation">
 <p>Prediction keys for BERT and RoBERTa are available <a href="{{site.url}}/downloads/predictions.tar.bz2" 
   rel="nofollow" target="_blank">
     Here predictions.tar.bz2 (2.2K)</a></p>
 
-<p>Previous models perform similarly on both <em>Easy</em> and <em>Hard</em> subsets, with the exception of Sasakiet al. (2017). Overall both BERT (76.5% ) and RoBERTa (87.7% ) considerably outperform the best previous model (71.4% ). However, BERT's improvements over previous work can be almost entirely attributed to high accuracy on the <em>Easy</em> subset: on this subset, finetuned BERT-large improves 8.6 percent over the model by Sasakiet al. (2017) (83.9% vs. 75.3%), but on the <em>Hard</em> subset, the improvement is only 2.9 percent (71.9% vs. 69.0%).
+<p>Previous models perform similarly on both <em>Easy</em> and <em>Hard</em> subsets, with the exception of Sasakiet al. (2017). Overall both BERT (76.5% ) and RoBERTa (87.7% ) considerably outperform the best previous model (71.4% ). However, BERT's improvements over previous work can be almost entirely attributed to high accuracy on the <em>Easy</em> subset: on this subset.
 This indicates that BERT relies on superficial cues.
 The difference between accuracy on <em>Easy</em> and <em>Hard</em> is less pronounced for RoBERTa, but still suggests some reliance on superficial cues.
 We speculate that superficial cues in the COPA training set prevented BERT and RoBERTa from focusing on task-related non-superficial cues such as causally related event pairs.</p>
@@ -117,7 +105,7 @@ We speculate that superficial cues in the COPA training set prevented BERT and R
 <p>Once superficial cues are removed, the models are able to learn the task to a high degree.</p>
 
 <p>The smaller performance gap between <em>Easy</em> and <em>Hard</em> subsets indicates that training on Balanced-COPA encourages BERT and RoBERTa to rely less on superficial cues.
-Moreover, training on Balanced-COPA improves performance on the Hard subset, both when training with all 1000 instances in Balanced-COPA, and when matching the training size of the original COPA (500 instances, <em>50% Balanced-COPA</em>). Note that training on <em> 50% of Balanced-COPA</em> exposes the model to lexically less diverse training instances than the original COPA due to the high overlap between mirrored alternatives.
+Moreover, training on Balanced-COPA improves performance on the Hard subset.
 
 <h2>BERT/RoBERTa Sensitivity to Superficial Cues</h2>
 <img src="{{site.url}}/assets/images/gradient_sensitivity_prod.png" alt="Gradient Sensitivity">
