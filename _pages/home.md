@@ -96,9 +96,7 @@ This results in the _Easy_ subset with 190 instances and the _Hard_ subset compr
 
 # Results
 
-# Easy and Hard Subsets Results
-
-## Easy and Hard Subsets Results
+## Evaluation on Easy and Hard Subsets
 
 <img src="{{site.url}}/assets/images/easy_hard_eval.png" alt="Easy/Hard Evaluation">
 
