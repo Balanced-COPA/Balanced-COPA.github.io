@@ -5,7 +5,7 @@
 layout: single
 author_profile: true
 permalink: /
-excerpt: "neutralizes **annotation artifacts** present in COPA alternatives"
+excerpt: "Choice of Plausible Alternatives without  annotation artifacts (hopefully)"
 header:
   overlay_color: "#333"
   caption: ""
@@ -18,22 +18,22 @@ header:
 
 # Summary
 
-<blockquote>Pretrained language models, such as BERT and RoBERTa, have shown large improvements in the commonsense reasoning benchmark COPA. However, recent work found that many improvements in benchmarks of natural language understanding are not due to models learning the task, but due to their increasing ability to exploit superficial cues, such as tokens that occur more often in the correct answer than the wrong one. Are BERT's and RoBERTa's good performance on COPA also caused by this?
+<blockquote>
+Pretrained language models, such as BERT and RoBERTa, have shown large improvements in the commonsense reasoning benchmark COPA. However, recent work found that many improvements in benchmarks of natural language understanding are not due to models learning the task, but due to their increasing ability to exploit superficial cues, such as tokens that occur more often in the correct answer than the wrong one. Are BERT's and RoBERTa's good performance on COPA also caused by this?
 
 We find superficial cues in COPA, as well as evidence that BERT exploits these cues. To remedy this problem, we introduce Balanced COPA an extension of COPA that does not suffer from easy-to-exploit single token cues.
 
 We analyze BERT's and RoBERTa's performance on original and Balanced COPA, finding that BERT relies on superficial cues when they are present, but still achieves comparable performance once they are made ineffective, suggesting that BERT learns the task to a certain degree when forced to. In contrast, RoBERTa does not appear to rely on superficial cues.
-
 </blockquote>
 
 # COPA: Choice of Plausible Alternatives
 
 Given a premise, such as _The man broke his toe_,
-<a href="http://people.ict.usc.edu/~gordon/copa.html" rel="nofollow" target="_blank">COPA</a> requires choosing the more plausible, causally related alternative, in this case either: because _He got a hole in his sock_ (wrong) or because _He dropped a hammer on his foot_ (correct). To test whether COPA contains superficial cues, we conduct a dataset ablation in which we provide only partial input to the model.
+<a href="http://people.ict.usc.edu/~gordon/copa.html" rel="nofollow" target="_blank">COPA</a> requires choosing the more plausible, causally related alternative, in this case either: because *He got a hole in his sock* (wrong) or because *He dropped a hammer on his foot* (correct). To test whether COPA contains superficial cues, we conduct a dataset ablation in which we provide only partial input to the model.
 
 Specifically, we provide only the two alternatives but not the premise, which makes solving the task impossible and hence should reduce the model to random performance. However, we observe that a model trained only on alternatives performs considerably better than random chance and trace this result to an unbalanced distribution of tokens between correct and wrong alternatives.
 
-Further analysis reveals that finetuned BERT and RoBERTa perform very well (80.5 percent accuracy) on _easy_ instances containing superficial cues, but worse (65.8 percent) on _hard_ instances without such simple cues.
+Further analysis reveals that finetuned BERT and RoBERTa perform very well on _easy_ instances containing superficial cues, but worse on _hard_ instances without such simple cues.
 
 To prevent models from exploiting superficial cues in COPA, we introduce **Balanced COPA**
 
@@ -51,7 +51,7 @@ superficial cues on model performance.
   rel="nofollow" target="_blank">
 balanced_copa.tar.bz2 (27K)</a>**
 
-# Balanced-COPA Examples
+# Balanced COPA Examples
 
 **Original instance**
 
@@ -104,19 +104,19 @@ This results in the _Easy_ subset with 190 instances and the _Hard_ subset compr
 
 Prediction keys for BERT and RoBERTa are available <a href="{{site.url}}/downloads/predictions.tar.bz2" rel="nofollow" target="_blank">Here predictions.tar.bz2 (2.2K)</a>
 
-Previous models perform similarly on both *Easy* and *Hard* subsets, with the exception of Sasakiet al. (2017). Overall both BERT (76.5% ) and RoBERTa (87.7% ) considerably outperform the best previous model (71.4% ). However, BERT's improvements over previous work can be almost entirely attributed to high accuracy on the *Easy* subset: on this subset.
+Previous models perform similarly on both *Easy* and *Hard* subsets, with the exception of Sasakiet al. (2017). Overall both BERT and RoBERTa considerably outperform the best previous model. However, BERT's improvements over previous work can be almost entirely attributed to high accuracy on the *Easy* subset: on this subset.
 This indicates that BERT relies on superficial cues.
 The difference between accuracy on *Easy* and *Hard* is less pronounced for RoBERTa, but still suggests some reliance on superficial cues.
 We speculate that superficial cues in the COPA training set prevented BERT and RoBERTa from focusing on task-related non-superficial cues such as causally related event pairs.
 
-## Effect of Balanced-COPA
+## Effect of Balanced COPA
 
 <img src="{{site.url}}/assets/images/bal_eval.png" alt="Easy/Hard Evaluation">
 
 Once superficial cues are removed, the models are able to learn the task to a high degree.
 
-The smaller performance gap between *Easy* and *Hard* subsets indicates that training on Balanced-COPA encourages BERT and RoBERTa to rely less on superficial cues.
-Moreover, training on Balanced-COPA improves performance on the Hard subset.
+The smaller performance gap between *Easy* and *Hard* subsets indicates that training on Balanced COPA encourages BERT and RoBERTa to rely less on superficial cues.
+Moreover, training on Balanced COPA improves performance on the Hard subset.
 
 ## BERT/RoBERTa Sensitivity to Superficial Cues
 

@@ -2,14 +2,14 @@ main:
   - title: "Paper"
     url: #
   - title: "Dataset"
-    url: "/downloads/balanced_copa.tar.bz2"
+    url: "https://github.com/Balanced-COPA/Balanced-COPA"
 sidemenu:
   - title: Quicklinks
     children:
       - title: "Paper"
         url: #
       - title: "Dataset"
-        url: "/downloads/balanced_copa.tar.bz2"
+        url: "https://github.com/Balanced-COPA/Balanced-COPA"
       - title: "Easy/Hard Subset IDs"
         url: "/downloads/easy_hard_subsets.json"
       - title: "BERT/RoBERTa Prediction Keys"

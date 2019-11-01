@@ -13,8 +13,11 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Balanced-COPA
+title: Balanced COPA
 email:
+title_separator: "-"
+subtitle: "without superficial cues"
+name: &name "Pride Kavumba"
 description: >- # this means to ignore newlines until "baseurl:"
   Balanced-COPA neutralizes superficial cues (annotation artifacts)
   present in the original training COPA (Choice of Plausible Alternatives)
