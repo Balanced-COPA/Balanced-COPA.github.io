@@ -1,13 +1,13 @@
 main:
   - title: "Paper"
-    url: #
+    url: "https://www.aclweb.org/anthology/D19-6004"
   - title: "Dataset"
     url: "https://github.com/Balanced-COPA/Balanced-COPA"
 sidemenu:
   - title: Quicklinks
     children:
       - title: "Paper"
-        url: #
+        url: "https://www.aclweb.org/anthology/D19-6004"
       - title: "Dataset"
         url: "https://github.com/Balanced-COPA/Balanced-COPA"
       - title: "Easy/Hard Subset IDs"
