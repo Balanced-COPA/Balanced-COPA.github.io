@@ -5,7 +5,8 @@
 layout: single
 author_profile: true
 permalink: /
-excerpt: "Choice of Plausible Alternatives without  annotation artifacts (hopefully)"
+excerpt: "Choice of Plausible Alternatives without superficial cues (hopefully)"
+title: "Balanced COPA"
 header:
   overlay_color: "#333"
   caption: ""
